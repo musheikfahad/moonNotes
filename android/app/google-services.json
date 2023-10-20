@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "185434535816",
+    "project_id": "nilanotes-flutter-proj",
+    "storage_bucket": "nilanotes-flutter-proj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185434535816:android:ca1ce2805ff9f1827fac3d",
+        "android_client_info": {
+          "package_name": "in.mushk.musheiknotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlnz0Bym6jIZoHGowhgyYvk9VYgpMaY5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185434535816:android:2d868a800cc2eb887fac3d",
+        "android_client_info": {
+          "package_name": "in.nilabanu.nilanotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlnz0Bym6jIZoHGowhgyYvk9VYgpMaY5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
