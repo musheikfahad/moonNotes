@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nilanotes/constants/routes.dart';
+import 'package:nilanotes/utilities/show_error_dialog.dart';
 // import 'dart:developer' as devtools show log;
 
 class LoginView extends StatefulWidget {
@@ -79,14 +80,30 @@ class _LoginViewState extends State<LoginView> {
             } on FirebaseAuthException catch (e) {
               // print("code is ====" + e.code);
               if (e.code == "INVALID_LOGIN_CREDENTIALS") {
-                // print("Invalid cred");
+                // ignore: use_build_context_synchronously
+                await showErrorDialog(
+                  context,
+                  "Invalid login credentials",
+                );
+              } else if (e.code == "invalid-email") {
+                // ignore: use_build_context_synchronously
+                await showErrorDialog(
+                  context,
+                  "Invalid email id",
+                );
               } else {
-                // print(e.code);
-                // print("something in the way");
+                // ignore: use_build_context_synchronously
+                await showErrorDialog(
+                  context,
+                  "Error: ${e.code}",
+                );
               }
-
-              // print(e.runtimeType);
-              // print(e);
+            } catch (e) {
+              // ignore: use_build_context_synchronously
+              await showErrorDialog(
+                context,
+                e.toString(),
+              );
             }
           },
           child: const Text("Login"),
