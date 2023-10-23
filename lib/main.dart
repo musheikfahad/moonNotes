@@ -23,6 +23,7 @@ void main() {
       loginRoute: (context) => const LoginView(),
       registerRoute: (context) => const RegisterView(),
       notesRoute: (context) => const NotesView(),
+      verifyEmailRoute: (context) => const VerifyEmailView(),
     },
   ));
 }
@@ -41,11 +42,11 @@ class HomePage extends StatelessWidget {
           case ConnectionState.done:
             final user = FirebaseAuth.instance.currentUser;
 
-            print(user);
+            // print(user);
 
             if (user != null) {
               if (user.emailVerified) {
-                print('Email is verified');
+                // print('Email is verified');
                 return const NotesView();
               } else {
                 return const VerifyEmailView();
